@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+}
+body {
+  background: linear-gradient(to left, rgb(38, 185, 243), rgb(29, 50, 97));
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator-grid > button {
+  font-size: 2rem;
+  border: 1px solid #eee;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-wrap: break-all;
+  overflow: hidden;
+}
+.output .prev-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.output .current-operand {
+  color: #eee;
+  font-size: 2.5rem;
+}
